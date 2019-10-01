@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: grid;
+    grid-template-areas:    "header         header          header"
+                            "section        section         section"
+                            "fotoplaya1     textoplaya      fotoplaya2"
+                            "fotoparque1    textoparque     fotoparque2"
+                            "fotorio1       textorio        fotorio2";
+
+
+    background-color: tomato;
+    color: white;
+}
+section{
+    grid-area: section;
+    background-image: url(../imagenes/inicial2.JPG);
+}
