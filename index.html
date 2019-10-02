@@ -9,31 +9,75 @@
 </head>
 
 <body>
-    <div class="contenedor">
+    <div id="contenedor">
         <header>
             <h1>Tu campamento</h1>
-
+            <nav>
+                <ul>
+                    <li><a href="#">Playa</a></li>
+                    <li><a href="#">Parque</a></li>
+                    <li><a href="#">Río</a></li>
+                </ul>
+            </nav>
         </header>
         <section>
-            <p>Te llevamos a pasar tus mejores momentos<br>Escoge un lugar, la cantidad de tiempo y te llevamos</p>
+            <div id="principal">
+                <h1>Te llevamos a pasar tus mejores momentos</h1>
+                <p>Escoge un lugar, la cantidad de tiempo y te llevamos</p>
+            </div>
         </section>
-        <article id="playa">
-            <img src="imagenes/playa.jpg" alt="Playa">
-            <h2>Playa</h2>
-            <img src="imagenes/bote.JPG" alt="Playa">
-        </article>
-        <article id="parque">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quis? Beatae eaque, accusamus inventore,
-            iste saepe mollitia id, alias corrupti nostrum recusandae adipisci necessitatibus. Dolorum at eius tenetur?
-            Voluptas, iste?
-        </article>
-        <article id="rio">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quis? Beatae eaque, accusamus inventore,
-            iste saepe mollitia id, alias corrupti nostrum recusandae adipisci necessitatibus. Dolorum at eius tenetur?
-            Voluptas, iste?
-        </article>
+        <div id="contenido">
+            <article id="playa">
+                <img src="imagenes/playa.jpg" alt="Playa">
+                <div class="descripcion">
+                    <h2>Playa</h2>
+                    <p>
+                        Ve a la playa por una semana, te llevamos en bote a distintos lugares...
+                    </p>
+                </div>
+                <img src="imagenes/bote.JPG" alt="Playa">
+            </article>
+            <article id="parque">
+                <img src="imagenes/parque3.jpg" alt="Playa">
+                <div class="descripcion">
+                    <h2>Parque</h2>
+                    <p>
+                        Paseos de un día al parque y disfruta de la naturaleza
+                    </p>
+                </div>
+                <img src="imagenes/parque4.jpg" alt="Playa">
+            </article>
+            <article id="rio">
+                <img src="imagenes/rio.jpg" alt="Playa">
+                <div class="descripcion">
+                    <h2>Rio</h2>
+                    <p>
+                        Quédate en un campamento y disfruta del río
+                    </p>
+                </div>
+                <img src="imagenes/rio3.JPG" alt="Playa">
+            </article>
+        </div>
         <footer>
-            footer
+            <section id="direccion">
+                <p>Dirección:</p>
+                <p>Edif 5 Av 1</p>
+                <br>
+                <p>Teléfonos:</p>
+                <p>123.123112</p>
+            </section>
+            <form action="" name="contacto">
+                <legend>Contacto</legend>
+                
+                    <label for="email">Email*:</label><br>
+                    <input type="email" name="email" id="email" required>
+                
+                <br>
+                    <label for="descripcion">Descripción*:</label><br>
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="10" required></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
         </footer>
     </div>
 </body>

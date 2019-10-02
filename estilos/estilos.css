@@ -3,54 +3,88 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.contenedor {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 100px 500px repeat(4, 1fr);
+#contenedor {
+    /* width: 90%; */
+    height: 100vh;
+    /* max-width: 1000px; */
+    /* margin: auto; */
 }
-
 header {
-    grid-column: 1 / 6;
-    grid-row: 1;
-    background-color: tomato;
+    display: flex;
+    background-color: #BD544D;
     color: white;
+    align-items: baseline;
+    padding: 15px;
 }
-section{
-    display:grid;
+ul{
+    display: flex;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
     
-    justify-content: center;
-    background-image: url(../imagenes/inicial2.JPG);
-    
-    grid-column: 1 / 6;
-    grid-row: 2;
+}
+ul li {
+    list-style-type: none;
+}
+header + section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     background-image: url(../imagenes/inicial2.JPG);
     background-color: brown;
+    height: 648px;
 }
-
-#playa{
-    display:flex;
+#principal{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width:600px;
+    margin-top: 40px;
+    padding: 30px;
+    line-height: 35px;
+    border-radius: 15px;
+    opacity: .6;
+}
+img{
+    width: 20vw;
+}
+#contenido{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    background-color: #FDFCEC;
+}       
+#contenido > article{
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:steelblue;
-    grid-column: 1 / 6;
-    grid-row: 3;
+    padding: 20px 20px;
 }
-#playa img{
-    width: 300px;
+#contenido > article:nth-child(2){
+    background-color: #EFF9E9;
 }
-#parque{
-    background-color:darkcyan;
-    grid-column: 1 / 6;
-    grid-row: 4;
+#contenido > article:nth-child(3){
+    background-color: #FCF2EA;
 }
-#rio{
-    background-color:darksalmon;
-    grid-column: 1 / 6;
-    grid-row: 5;
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 25vw;
 }
 footer{
     background-color:black;
     color: white;
-    grid-column: 1 / 6;
-    grid-row: 6;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:500px){
+    article img:nth-child(1){
+        display: none;
+    }
 }
