@@ -1,21 +1,56 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header{
+
+.contenedor {
     display: grid;
-    grid-template-areas:    "header         header          header"
-                            "section        section         section"
-                            "fotoplaya1     textoplaya      fotoplaya2"
-                            "fotoparque1    textoparque     fotoparque2"
-                            "fotorio1       textorio        fotorio2";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100px 500px repeat(4, 1fr);
+}
 
-
+header {
+    grid-column: 1 / 6;
+    grid-row: 1;
     background-color: tomato;
     color: white;
 }
 section{
-    grid-area: section;
+    display:grid;
+    
+    justify-content: center;
     background-image: url(../imagenes/inicial2.JPG);
+    
+    grid-column: 1 / 6;
+    grid-row: 2;
+    background-color: brown;
+}
+
+#playa{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:steelblue;
+    grid-column: 1 / 6;
+    grid-row: 3;
+}
+#playa img{
+    width: 300px;
+}
+#parque{
+    background-color:darkcyan;
+    grid-column: 1 / 6;
+    grid-row: 4;
+}
+#rio{
+    background-color:darksalmon;
+    grid-column: 1 / 6;
+    grid-row: 5;
+}
+footer{
+    background-color:black;
+    color: white;
+    grid-column: 1 / 6;
+    grid-row: 6;
 }
