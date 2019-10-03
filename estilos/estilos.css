@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --header-footer-color:#BD544D;
+}
+
+
 #contenedor{
     display: flex;
     flex-direction: column;
@@ -12,7 +18,7 @@ header{
     display: flex;
     align-items: center;
     height: 80px;
-    background-color: #BD544D;
+    background-color:var(--header-footer-color);
     color: white;
     padding: 15px;
 }
@@ -28,15 +34,17 @@ nav ul li a{
 }
 nav ul li a:hover{
     /* font-weight: bold; */
-    color:lemonchiffon;
-    text-shadow: 1px 1px black;
+    color:brown;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 #principal{
     display: flex;
     justify-content: center;
-    height: 648px;
-    background-image: url(../imagenes/inicial2.JPG);
+    height: 759px;
+    /* width: 100%; */
+    background-image: url(../imagenes/cancun-1235489_1920.jpg);
 }
 #principal > div {
     display: flex;
@@ -47,7 +55,7 @@ nav ul li a:hover{
     height: 150px;
     background-color: white;
     border-radius: 15px;
-    opacity: .6;
+    opacity: .4;
 }
 #principal h1{
     font-weight: bold;
@@ -99,15 +107,16 @@ nav ul li a:hover{
     width: 300px;
 }
 footer{
-    margin: 15px;
+    /* margin: 15px; */
     display: flex;
     justify-content: space-between;
-    /* background-color: #FBFAEB; */
-    /* color: white; */
+    background-color: var(--header-footer-color);
+    color: white;
 }
 
 footer > *{
     padding: 15px;
+    margin: 15px;
 }
 footer #direccion{
     margin-left: 50px;
@@ -115,11 +124,16 @@ footer #direccion{
 form[name="contacto"]{
     border: 1px solid lightgray;
     border-radius: 5px;
-    background-color: #FCF2EA;
+   width: 350px; 
+    /* background-color: #FCF2EA; */
 }
-
+form[name="contacto"] textarea{
+    
+    height: 50px;
+}
 form textarea,
-form input{
+form input[type="email"]{
+    width:100%;
     border: 1px solid lightgray;
 }
 
@@ -133,9 +147,39 @@ form input{
     #contenido #rio img:nth-child(1){
         display: none;
     }
+    form[name="contacto"]{
+     
+       width: 300px; 
+     
+    }
 }
-
+input[type="submit"]{
+    background-color:brown;
+    padding: 15px;
+    color:white;
+    border: 0;
+    border-radius:5px;
+}
+input[type="submit"]:hover{
+    /* color:brown; */
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
 @media screen and (max-width:576px){
+    header{
+        flex-direction:column;
+        padding: 0;
+    }
+    nav ul li{
+        padding: 0;
+    }
+    #principal h1{
+        font-size: 20px;
+    }
+    #principal p{
+        font-size: 12px;
+    }
     #contenido #playa img:nth-child(1){
         display: none;
     }
