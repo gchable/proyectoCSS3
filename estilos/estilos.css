@@ -82,7 +82,7 @@ nav ul li a:hover{
 }
 #contenido article img:hover{
     transform: scale(1.1, 1.1);
-    filter: brightness(130%);
+    filter: brightness(120%);
 }
 #contenido article .descripcion{
     display: flex;
