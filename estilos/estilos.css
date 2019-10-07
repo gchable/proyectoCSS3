@@ -82,6 +82,7 @@ nav ul li a:hover{
 }
 #contenido article img:hover{
     transform: scale(1.1, 1.1);
+    filter: brightness(130%);
 }
 #contenido article .descripcion{
     display: flex;
@@ -173,6 +174,9 @@ input[type="submit"]:hover{
     }
     nav ul li{
         padding: 0;
+    }
+    #principal > div {
+        margin: 5px;
     }
     #principal h1{
         font-size: 20px;
